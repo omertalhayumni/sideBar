@@ -1,10 +1,21 @@
-.side-bar-container {
-  background-color: rgb(4, 26, 37);
-  max-width: 250px;
+.side-nav-container {
+  width: 250px;
   height: 100vh;
   position: relative;
+
   color: rgb(202, 216, 223);
+  background-color: rgb(4, 26, 37);
+
   transition: 0.4s;
+}
+
+.side-nav-container-NX {
+  width: 60px;
+  transition: 0.4;
+}
+.h2heading-NX {
+  display: none;
+  transition: 0.4;
 }
 
 .nav-upper,
@@ -60,8 +71,17 @@
   height: 2.5px;
   width: 25px;
   margin-right: 20px;
+  transition: 0.4s;
 }
 
-.hamburger:hover span {
-  margin: auto;
+.hamburger-in:hover span:nth-child(1) {
+  width: 25px;
+  transform: translate(-3px, 10px) rotate(180deg);
+}
+/* .spann:hover span:nth-child(2) {
+  display: none;
+} */
+.hamburger-in:hover span:nth-child(3) {
+  width: 25px;
+  transform: translate(3px, -10px) rotate(-180deg);
 }

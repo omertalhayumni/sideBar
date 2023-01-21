@@ -3,21 +3,29 @@ import "./SideNavBar.css";
 import { useState } from "react";
 
 const SideNavBar = () => {
-  const [isExpended, setExpendedState] = useState(false);
+  const [isExpanded, setExpendState] = useState(false);
 
   return (
-    <div className="side-bar-container">
+    <div
+      className={
+        isExpanded
+          ? "side-nav-container"
+          : "side-nav-container side-nav-container-NX"
+      }
+    >
       <div className="nav-upper">
         <div className="nav-heading">
           <div className="nav-brand">
             <img src="../../public/icons/Logo.svg" alt="logo" />
-            <h2>SELF TECHNOLOGY</h2>
+            <h2 className={isExpanded ? "h2heading" : "h2heading h2heading-NX"}>
+              SELF TECHNOLOGY
+            </h2>
           </div>
           <button
             className={
-              isExpended ? "hamburger hamburger-in" : "hamburger hamburger-out"
+              isExpanded ? "hamburger hamburger-in" : "hamburger hamburger-out"
             }
-            onClick={() => setExpendedState(!isExpended)}
+            onClick={() => setExpendState(!isExpanded)}
           >
             <div className="spann">
               <span></span>
